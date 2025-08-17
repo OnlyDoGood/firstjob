@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Fortura Insurance</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', 'Playfair', 'Poppins', Arial, sans-serif;
+    }
+    .auth-section {
+      background: #f5faff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(35, 166, 240, 0.07);
+      padding: 40px 24px;
+      max-width: 400px;
+      margin: 60px auto;
+      text-align: center;
+    }
+    .auth-section h2 {
+      color: #23a6f0;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-family: 'Montserrat', 'Playfair', 'Poppins', Arial, sans-serif;
+    }
+    .auth-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .auth-section label {
+      color: #23a6f0;
+      font-weight: 500;
+      margin-bottom: 6px;
+      text-align: left;
+      font-family: 'Montserrat', 'Playfair', 'Poppins', Arial, sans-serif;
+    }
+    .auth-section input {
+      padding: 10px 16px;
+      border: 1.5px solid #23a6f0;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff;
+      transition: border 0.2s;
+      font-family: 'Montserrat', 'Playfair', 'Poppins', Arial, sans-serif;
+    }
+    .auth-section input:focus {
+      border: 1.5px solid #b00cf4;
+      background: #f3eaff;
+    }
+    .auth-section button {
+      background: linear-gradient(90deg, #23a6f0 0%, #b00cf4 100%);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s;
+      font-family: 'Montserrat', 'Playfair', 'Poppins', Arial, sans-serif;
+    }
+    .auth-section button:hover {
+      background: linear-gradient(90deg, #b00cf4 0%, #23a6f0 100%);
+    }
+    .auth-section .auth-link {
+      display: block;
+      margin-top: 18px;
+      color: #23a6f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+      font-family: 'Montserrat', 'Playfair', 'Poppins', Arial, sans-serif;
+    }
+    .auth-section .auth-link:hover {
+      color: #b00cf4;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-section">
+    <h2>Login</h2>
+    <p style="color:#23a6f0; font-weight:600; margin-bottom:18px; font-size:1.1rem; letter-spacing:1px; font-family: 'Montserrat', 'Playfair', 'Poppins', Arial, sans-serif;">
+      Fortura Insurance
+    </p>
+    <form>
+      <div>
+        <label for="login-email">Email Address</label>
+        <input type="email" id="login-email" name="login-email" placeholder="Your email" required>
+      </div>
+      <div>
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" name="login-password" placeholder="Your password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <a href="create-account.html" class="auth-link">Don't have an account? Create one</a>
+    <a href="index.html" class="auth-link" style="margin-top:10px;">&#8592; Back to Home</a>
+  </div>
+</body>
+</html>

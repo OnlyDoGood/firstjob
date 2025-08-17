@@ -1,0 +1,154 @@
+# Fortura Insurance Backend Setup Guide
+
+This README will guide you step-by-step to create a backend for your Fortura Insurance website.  
+You can use PHP (with XAMPP), Node.js, or Python (Flask/Django).  
+Below is a gradual approach using PHP and MySQL, since your project is in `c:\xampp\htdocs\insurance`.
+
+---
+
+## 1. **Set Up Your Environment**
+
+- Install [XAMPP](https://www.apachefriends.org/index.html) if not already done.
+- Start **Apache** and **MySQL** from the XAMPP Control Panel.
+
+---
+
+## 2. **Create the Database**
+
+1. Go to [http://localhost/phpmyadmin](http://localhost/phpmyadmin).
+2. Click **New** and create a database called `fortura_insurance`.
+3. Create tables for users, appointments, contacts, etc. Example for users:
+
+```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255),
+  phone VARCHAR(20),
+  address VARCHAR(255),
+  insurance_type VARCHAR(50),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+## 3. **Create Backend Files**
+
+- In your project folder (`c:\xampp\htdocs\insurance`), create a folder called `backend`.
+- Add PHP files for each feature:
+  - `register.php` (for account creation)
+  - `login.php` (for login)
+  - `appointment.php` (for booking appointments)
+  - `contact.php` (for contact form)
+
+---
+
+## 4. **Connect to the Database**
+
+Create a file `backend/db.php`:
+
+```php
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "fortura_insurance";
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+```
+
+---
+
+## 5. **Handle Registration**
+
+Create `backend/register.php`:
+
+```php
+<?php
+include 'db.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["register-name"];
+    $email = $_POST["register-email"];
+    $password = password_hash($_POST["register-password"], PASSWORD_DEFAULT);
+    $phone = $_POST["register-phone"];
+    $address = $_POST["register-address"];
+    $type = $_POST["register-type"];
+    $sql = "INSERT INTO users (name, email, password, phone, address, insurance_type)
+            VALUES ('$name', '$email', '$password', '$phone', '$address', '$type')";
+    if ($conn->query($sql) === TRUE) {
+        echo "Account created successfully!";
+    } else {
+        echo "Error: " . $conn->error;
+    }
+}
+?>
+```
+
+---
+
+## 6. **Handle Login**
+
+Create `backend/login.php`:
+
+```php
+<?php
+include 'db.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["login-email"];
+    $password = $_POST["login-password"];
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $result = $conn->query($sql);
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row["password"])) {
+            echo "Login successful!";
+            // Set session or redirect
+        } else {
+            echo "Invalid password.";
+        }
+    } else {
+        echo "No user found.";
+    }
+}
+?>
+```
+
+---
+
+## 7. **Handle Appointments & Contacts**
+
+Repeat similar steps for `appointment.php` and `contact.php`:
+- Create tables in MySQL.
+- Create PHP files to insert form data into the tables.
+
+---
+
+## 8. **Connect Frontend Forms to Backend**
+
+- Set the `action` attribute of your forms to the respective PHP files, e.g.:
+  ```html
+  <form action="backend/register.php" method="POST">
+    <!-- form fields -->
+  </form>
+  ```
+
+---
+
+## 9. **Test Everything**
+
+- Open [http://localhost/insurance](http://localhost/insurance) in your browser.
+- Test registration, login, appointment, and contact forms.
+- Check your database for new entries.
+
+---
+
+## 10. **Secure and Expand**
+
+- Add input validation and error handling.
+- Use sessions for login.
+- Expand with admin features,
