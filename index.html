@@ -2,9 +2,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Fortura Insurance - Coverage You Can Count On">
-    <meta name="keywords" content="insurance, health, auto, home, life">
-    <link rel="icon" href="assets/favicon.ico">
+    <meta
+      name="description"
+      content="Fortura Insurance - Coverage You Can Count On"
+    />
+    <meta name="keywords" content="insurance, health, auto, home, life" />
+    <link rel="icon" href="assets/favicon.ico" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
@@ -15,7 +18,10 @@
     <header id="header-main-section">
       <div class="head">
         <h2>FORTURA INSURANCE</h2>
-        <div class="links">
+           <div class="hamburger">
+          <ion-icon name="menu"></ion-icon>
+        </div>
+        <div class="links .show-nav">
           <span class="link-item"><a href="#options">Home</a></span>
           <span class="link-item products-dropdown">
             Products
@@ -29,12 +35,15 @@
           <span class="link-item"><a href="#pricing">Pricing</a></span>
           <span class="link-item"><a href="#contact">Contact</a> </span>
         </div>
-        <div class="right-side">
-          <span class="login"><a href="login.html">Login</a></span>
-         <a href="create-account.html"> <button class="btn-member">
-            Become a member <ion-icon name="arrow-forward-outline"></ion-icon>
-          </button></a>
+        <div class="right-side .show-nav">
+          <span class="login"><a href="/login.html">Login</a></span>
+          <a href="/create-account.html">
+            <button class="btn-member">
+              Become a member
+              <ion-icon name="arrow-forward-outline"></ion-icon></button
+          ></a>
         </div>
+     
       </div>
       <div class="header-main-section">
         <h1 class="header-main-section-head">
@@ -55,7 +64,9 @@
     </header>
     <div class="options" id="options">
       <div class="option-item">
-        <span class="option-icons"><ion-icon name="shield-checkmark"></ion-icon></span>
+        <span class="option-icons"
+          ><ion-icon name="shield-checkmark"></ion-icon
+        ></span>
         <h3>Health Insurance</h3>
         <p>Comprehensive plans for individuals and families.</p>
       </div>
@@ -78,7 +89,11 @@
     <div class="industry">
       <h2 class="industry-header">Why Choose Fortura?</h2>
       <div class="industry-description">
-        <p>We have over 20 years of experience serving clients worldwide. Our team of experts is dedicated to providing personalized insurance solutions for every need.</p>
+        <p>
+          We have over 20 years of experience serving clients worldwide. Our
+          team of experts is dedicated to providing personalized insurance
+          solutions for every need.
+        </p>
       </div>
     </div>
     <div class="sponsors">
@@ -89,12 +104,20 @@
     </div>
     <div class="newsletter">
       <h2 class="newsletter-header">Stay Updated</h2>
-      <form class="newsletter-input" aria-label="Newsletter Signup" onsubmit="return validateNewsletter()">
-        <input type="email" placeholder="Enter your email" aria-label="Email" required>
+      <form
+        class="newsletter-input"
+        aria-label="Newsletter Signup"
+        onsubmit="return validateNewsletter()"
+      >
+        <input
+          type="email"
+          placeholder="Enter your email"
+          aria-label="Email"
+          required
+        />
         <button type="submit">Subscribe</button>
       </form>
     </div>
-   
 
     <div class="pricing" id="pricing">
       <div class="pricing-header">
@@ -171,7 +194,8 @@
             <span class="pricing-badge premium-badge">Best Value</span>
           </div>
           <p class="pricing-card-desc">
-            Best for businesses that need advanced coverage and dedicated support.
+            Best for businesses that need advanced coverage and dedicated
+            support.
           </p>
           <div class="pricing-dollar">
             <span class="pricing-currency">$</span>
@@ -208,26 +232,49 @@
       <div class="reach-desc">
         <h1>We Have Branches All Over The World</h1>
         <span>
-          Fortura Insurance is proud to serve clients across the globe, with branches in major cities including London, New York, Dubai, and Singapore. Our international presence allows us to provide tailored insurance solutions that meet the unique needs of individuals, families, and businesses in every region. Whether you’re seeking health, home, life, or auto insurance, our experienced agents are ready to guide you through every step. We believe in building lasting relationships and delivering peace of mind, wherever you are in the world.
+          Fortura Insurance is proud to serve clients across the globe, with
+          branches in major cities including London, New York, Dubai, and
+          Singapore. Our international presence allows us to provide tailored
+          insurance solutions that meet the unique needs of individuals,
+          families, and businesses in every region. Whether you’re seeking
+          health, home, life, or auto insurance, our experienced agents are
+          ready to guide you through every step. We believe in building lasting
+          relationships and delivering peace of mind, wherever you are in the
+          world.
         </span>
       </div>
       <div class="appointment">
         <div class="appointment-desc">
           <h1>Book an Appointment</h1>
-          <span>Schedule a meeting with our insurance experts for personalized advice.</span>
+          <span
+            >Schedule a meeting with our insurance experts for personalized
+            advice.</span
+          >
         </div>
         <form class="appointment-form">
           <div class="input-desc">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
           </div>
           <div class="input-desc">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
           </div>
           <div class="input-desc">
             <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="date" required />
           </div>
           <div class="input-desc">
             <label for="type">Insurance Type</label>
@@ -241,9 +288,20 @@
           </div>
           <div class="input-desc">
             <label for="message">Message</label>
-            <input type="text" id="message" name="message" placeholder="Your message (optional)">
+            <input
+              type="text"
+              id="message"
+              name="message"
+              placeholder="Your message (optional)"
+            />
           </div>
-          <button type="submit" class="btn-price-modern" style="width:100%;margin-top:10px;">Book Now</button>
+          <button
+            type="submit"
+            class="btn-price-modern"
+            style="width: 100%; margin-top: 10px"
+          >
+            Book Now
+          </button>
         </form>
       </div>
     </div>
@@ -251,143 +309,269 @@
       <h2>Meet Our Team</h2>
       <div class="team-members">
         <div class="team-member">
-          <img src="assets/family-showcasing-their-home.jpg" alt="Jane Doe, CEO">
+          <img
+            src="assets/family-showcasing-their-home.jpg"
+            alt="Jane Doe, CEO"
+          />
           <div class="team-member-name">Jane Doe</div>
           <div class="team-member-role">Chief Executive Officer</div>
-          <div class="team-member-desc">Leading Fortura with 15+ years of insurance expertise and a passion for client success.</div>
+          <div class="team-member-desc">
+            Leading Fortura with 15+ years of insurance expertise and a passion
+            for client success.
+          </div>
         </div>
         <div class="team-member">
-          <img src="assets/doctor-filling-up-life-insurance-form.jpg" alt="John Smith, Head of Claims">
+          <img
+            src="assets/doctor-filling-up-life-insurance-form.jpg"
+            alt="John Smith, Head of Claims"
+          />
           <div class="team-member-name">John Smith</div>
           <div class="team-member-role">Head of Claims</div>
-          <div class="team-member-desc">Ensures every claim is handled quickly and fairly for our valued customers.</div>
+          <div class="team-member-desc">
+            Ensures every claim is handled quickly and fairly for our valued
+            customers.
+          </div>
         </div>
         <div class="team-member">
-          <img src="assets/portrait-diverse-women-together.jpg" alt="Aisha Bello, Customer Service">
+          <img
+            src="assets/portrait-diverse-women-together.jpg"
+            alt="Aisha Bello, Customer Service"
+          />
           <div class="team-member-name">Aisha Bello</div>
           <div class="team-member-role">Customer Service Lead</div>
-          <div class="team-member-desc">Dedicated to providing support and guidance for all your insurance needs.</div>
+          <div class="team-member-desc">
+            Dedicated to providing support and guidance for all your insurance
+            needs.
+          </div>
         </div>
         <div class="team-member">
-          <img src="assets/man-boxes.jpg" alt="Carlos Fernandez, Sales Manager">
+          <img
+            src="assets/man-boxes.jpg"
+            alt="Carlos Fernandez, Sales Manager"
+          />
           <div class="team-member-name">Carlos Fernandez</div>
           <div class="team-member-role">Sales Manager</div>
-          <div class="team-member-desc">Helping clients find the best insurance solutions for their families and businesses.</div>
+          <div class="team-member-desc">
+            Helping clients find the best insurance solutions for their families
+            and businesses.
+          </div>
         </div>
         <div class="team-member">
-          <img src="assets/happy-black-parents-with-kids-making-video-call-smart-phone-home.jpg" alt="Linda Park, Marketing Director">
+          <img
+            src="assets/happy-black-parents-with-kids-making-video-call-smart-phone-home.jpg"
+            alt="Linda Park, Marketing Director"
+          />
           <div class="team-member-name">Linda Park</div>
           <div class="team-member-role">Marketing Director</div>
-          <div class="team-member-desc">Spreading the word about Fortura’s commitment to protection and peace of mind.</div>
+          <div class="team-member-desc">
+            Spreading the word about Fortura’s commitment to protection and
+            peace of mind.
+          </div>
         </div>
         <div class="team-member">
-          <img src="assets/protect-your-house.jpg" alt="Samuel Okoro, Underwriting Specialist">
+          <img
+            src="assets/protect-your-house.jpg"
+            alt="Samuel Okoro, Underwriting Specialist"
+          />
           <div class="team-member-name">Samuel Okoro</div>
           <div class="team-member-role">Underwriting Specialist</div>
-          <div class="team-member-desc">Expert in risk assessment and policy customization for our diverse clients.</div>
+          <div class="team-member-desc">
+            Expert in risk assessment and policy customization for our diverse
+            clients.
+          </div>
         </div>
       </div>
     </section>
     <section class="testimonials">
       <h2>What Our Clients Say</h2>
       <blockquote>
-        "Fortura Insurance gave me peace of mind and excellent service!" – John Smith
+        "Fortura Insurance gave me peace of mind and excellent service!" – John
+        Smith
       </blockquote>
     </section>
     <section class="faq">
       <h2>Frequently Asked Questions</h2>
       <details>
         <summary>How do I file an insurance claim?</summary>
-        <p>You can file a claim online through our portal or contact our support team for assistance. We’ll guide you through every step.</p>
+        <p>
+          You can file a claim online through our portal or contact our support
+          team for assistance. We’ll guide you through every step.
+        </p>
       </details>
       <details>
         <summary>What types of insurance do you offer?</summary>
-        <p>We offer health, home, auto, and life insurance plans tailored to your needs.</p>
+        <p>
+          We offer health, home, auto, and life insurance plans tailored to your
+          needs.
+        </p>
       </details>
       <details>
         <summary>How quickly are claims processed?</summary>
-        <p>Most claims are processed within 3-5 business days. Priority processing is available for premium members.</p>
+        <p>
+          Most claims are processed within 3-5 business days. Priority
+          processing is available for premium members.
+        </p>
       </details>
       <details>
         <summary>Can I customize my insurance plan?</summary>
-        <p>Yes, our agents can help you customize your coverage to fit your unique requirements.</p>
+        <p>
+          Yes, our agents can help you customize your coverage to fit your
+          unique requirements.
+        </p>
       </details>
       <details>
         <summary>Is there a mobile app for managing my policy?</summary>
-        <p>Yes, you can download our app to manage your policy, file claims, and contact support from your phone.</p>
+        <p>
+          Yes, you can download our app to manage your policy, file claims, and
+          contact support from your phone.
+        </p>
       </details>
       <details>
         <summary>How do I contact customer support?</summary>
-        <p>You can reach us by phone, email, or live chat. Visit our contact section for details.</p>
+        <p>
+          You can reach us by phone, email, or live chat. Visit our contact
+          section for details.
+        </p>
       </details>
       <details>
         <summary>Do you offer discounts for families or businesses?</summary>
-        <p>We offer special discounts for families, groups, and businesses. Contact us for a personalized quote.</p>
+        <p>
+          We offer special discounts for families, groups, and businesses.
+          Contact us for a personalized quote.
+        </p>
       </details>
     </section>
     <section class="contact" id="contact">
       <h2>Contact Us</h2>
       <p>Email: support@fortura.com | Phone: +123-456-7890</p>
-      <form class="contact-form" style="max-width:400px;margin:24px auto 0 auto;">
+      <form
+        class="contact-form"
+        style="max-width: 400px; margin: 24px auto 0 auto"
+      >
         <div class="input-desc">
           <label for="contact-name">Full Name</label>
-          <input type="text" id="contact-name" name="contact-name" placeholder="Your name" required>
+          <input
+            type="text"
+            id="contact-name"
+            name="contact-name"
+            placeholder="Your name"
+            required
+          />
         </div>
         <div class="input-desc">
           <label for="contact-email">Email Address</label>
-          <input type="email" id="contact-email" name="contact-email" placeholder="Your email" required>
+          <input
+            type="email"
+            id="contact-email"
+            name="contact-email"
+            placeholder="Your email"
+            required
+          />
         </div>
         <div class="input-desc">
           <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="contact-message" rows="4" placeholder="Type your message here..." required style="border-radius:8px;padding:10px;"></textarea>
+          <textarea
+            id="contact-message"
+            name="contact-message"
+            rows="4"
+            placeholder="Type your message here..."
+            required
+            style="border-radius: 8px; padding: 10px"
+          ></textarea>
         </div>
-        <button type="submit" class="btn-price-modern" style="width:100%;margin-top:10px;">Send Message</button>
+        <button
+          type="submit"
+          class="btn-price-modern"
+          style="width: 100%; margin-top: 10px"
+        >
+          Send Message
+        </button>
       </form>
     </section>
     <div class="clients">
       <div class="clients-item">
-        <img src="assets/happy-black-parents-with-kids-making-video-call-smart-phone-home.jpg" alt="The Johnson Family" class="client-img">
-        <div class="clients-desc">The Johnson Family<br><span>Home Insurance</span></div>
+        <img
+          src="assets/happy-black-parents-with-kids-making-video-call-smart-phone-home.jpg"
+          alt="The Johnson Family"
+          class="client-img"
+        />
+        <div class="clients-desc">
+          The Johnson Family<br /><span>Home Insurance</span>
+        </div>
         <div class="rating">
           <span class="rating-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </div>
         <p>"Fortura helped us protect our home and gave us peace of mind."</p>
       </div>
       <div class="clients-item">
-        <img src="assets/doctor-filling-up-life-insurance-form.jpg" alt="Dr. Emily Carter" class="client-img">
-        <div class="clients-desc">Dr. Emily Carter<br><span>Life Insurance</span></div>
+        <img
+          src="assets/doctor-filling-up-life-insurance-form.jpg"
+          alt="Dr. Emily Carter"
+          class="client-img"
+        />
+        <div class="clients-desc">
+          Dr. Emily Carter<br /><span>Life Insurance</span>
+        </div>
         <div class="rating">
           <span class="rating-star">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
         </div>
         <p>"The life insurance plan was easy to set up and affordable."</p>
       </div>
       <div class="clients-item">
-        <img src="assets/man-boxes.jpg" alt="Carlos Fernandez" class="client-img">
-        <div class="clients-desc">Carlos Fernandez<br><span>Auto Insurance</span></div>
+        <img
+          src="assets/man-boxes.jpg"
+          alt="Carlos Fernandez"
+          class="client-img"
+        />
+        <div class="clients-desc">
+          Carlos Fernandez<br /><span>Auto Insurance</span>
+        </div>
         <div class="rating">
           <span class="rating-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </div>
         <p>"Quick claims and great customer service for my car insurance."</p>
       </div>
       <div class="clients-item">
-        <img src="assets/protect-your-house.jpg" alt="Linda Park" class="client-img">
-        <div class="clients-desc">Linda Park<br><span>Home Insurance</span></div>
+        <img
+          src="assets/protect-your-house.jpg"
+          alt="Linda Park"
+          class="client-img"
+        />
+        <div class="clients-desc">
+          Linda Park<br /><span>Home Insurance</span>
+        </div>
         <div class="rating">
           <span class="rating-star">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
         </div>
-        <p>"Fortura made it easy to get the right coverage for my new house."</p>
+        <p>
+          "Fortura made it easy to get the right coverage for my new house."
+        </p>
       </div>
       <div class="clients-item">
-        <img src="assets/portrait-diverse-women-together.jpg" alt="Aisha Bello & Friends" class="client-img">
-        <div class="clients-desc">Aisha Bello & Friends<br><span>Health Insurance</span></div>
+        <img
+          src="assets/portrait-diverse-women-together.jpg"
+          alt="Aisha Bello & Friends"
+          class="client-img"
+        />
+        <div class="clients-desc">
+          Aisha Bello & Friends<br /><span>Health Insurance</span>
+        </div>
         <div class="rating">
           <span class="rating-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </div>
-        <p>"Our group health plan covers everything we need. Highly recommended!"</p>
+        <p>
+          "Our group health plan covers everything we need. Highly recommended!"
+        </p>
       </div>
       <div class="clients-item">
-        <img src="assets/family-showcasing-their-home.jpg" alt="The Okoro Family" class="client-img">
-        <div class="clients-desc">The Okoro Family<br><span>Home & Life Insurance</span></div>
+        <img
+          src="assets/family-showcasing-their-home.jpg"
+          alt="The Okoro Family"
+          class="client-img"
+        />
+        <div class="clients-desc">
+          The Okoro Family<br /><span>Home & Life Insurance</span>
+        </div>
         <div class="rating">
           <span class="rating-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </div>
@@ -399,10 +583,30 @@
       <a href="terms.html">Terms of Service</a> |
       <a href="cookies.html">Cookie Notice</a>
       <div class="footer-social">
-        <a href="https://facebook.com/fortura" target="_blank" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
-        <a href="https://twitter.com/fortura" target="_blank" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
-        <a href="https://instagram.com/fortura" target="_blank" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
-        <a href="https://linkedin.com/company/fortura" target="_blank" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a
+          href="https://facebook.com/fortura"
+          target="_blank"
+          aria-label="Facebook"
+          ><ion-icon name="logo-facebook"></ion-icon
+        ></a>
+        <a
+          href="https://twitter.com/fortura"
+          target="_blank"
+          aria-label="Twitter"
+          ><ion-icon name="logo-twitter"></ion-icon
+        ></a>
+        <a
+          href="https://instagram.com/fortura"
+          target="_blank"
+          aria-label="Instagram"
+          ><ion-icon name="logo-instagram"></ion-icon
+        ></a>
+        <a
+          href="https://linkedin.com/company/fortura"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><ion-icon name="logo-linkedin"></ion-icon
+        ></a>
       </div>
     </footer>
     <script
@@ -417,7 +621,7 @@
     <script>
       function validateNewsletter() {
         // Add your validation logic
-        alert('Thank you for subscribing!');
+        alert("Thank you for subscribing!");
         return false; // Prevent actual submission for demo
       }
     </script>

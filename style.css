@@ -123,6 +123,7 @@ header {
     height: 32px;
     margin-left: 10px;
     z-index: 101;
+    font-size: 45px;
 }
 .hamburger span {
     display: block;
@@ -144,8 +145,10 @@ header {
 }
 
 /* Responsive Navigation */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+  
     .head {
+      display: flex;
         flex-direction: row;
         padding: 16px 2%;
     }
@@ -191,7 +194,7 @@ header {
     width: 60%;
     margin:auto ;
     position: relative;
-    top: 170px;
+    top: 120px;
    
     border: none;
     background: rgba(0, 0, 0, 0.5);
@@ -836,7 +839,7 @@ header {
 
 @media (max-width: 900px) {
   .head {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     padding: 10px;
     text-align: center;
@@ -944,7 +947,7 @@ header {
     padding: 5px;
   }
   .links span {
-  c
+  cursor: pointer;
   }
   .right-side button {
     width: 100px;
@@ -956,6 +959,7 @@ header {
     width: 100%;
     margin: 1rem auto;
     padding: 6px;
+    
   }
   .header-main-section-head {
     font-size: 18px;
