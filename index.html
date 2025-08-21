@@ -37,7 +37,7 @@
           <a href="login.html" class="login-btn">Login</a>
           <a href="create-account.html" class="member-btn">Become a Member</a>
         </div>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger-menu">
           <ion-icon name="menu" class="menu-icon"></ion-icon>
           <ion-icon name="close" class="close-icon" style="display:none;"></ion-icon>
         </div>
@@ -45,7 +45,7 @@
       <!-- Only for mobile: -->
       <nav class="nav-overlay" id="nav-overlay">
         <div class="nav-content">
-          <span class="nav-close" id="nav-close">
+          <span class="nav-close" id="nav-closes">
             <ion-icon name="close"></ion-icon>
           </span>
           <h2 class="nav-logo">FORTURA INSURANCE</h2>
@@ -636,6 +636,65 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="script.js"></script>
+    <script>
+      
+  // Hamburger menu and overlay
+  const hamburger = document.getElementById('hamburger-menu');
+  const navOverlay = document.getElementById('nav-overlay');
+  const navClose = document.getElementById('nav-closes');
+  const menuIcon = hamburger?.querySelector('.menu-icon');
+  const closeIcon = hamburger?.querySelector('.close-icon');
+  const links = document.querySelector('.links');
+  const rightSide = document.querySelector('.right-side');
+
+  if (hamburger && navOverlay && navClose) {
+    hamburger.addEventListener('click', function() {
+      navOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (menuIcon && closeIcon) {
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+      }
+    });
+
+    navClose.addEventListener('click', function() {
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+      if (menuIcon && closeIcon) {
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      }
+    });
+
+    navOverlay.querySelectorAll('.nav-link, .login-btn, .member-btn, .products-list a').forEach(function(el) {
+      el.addEventListener('click', function() {
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (menuIcon && closeIcon) {
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // Hamburger for desktop nav (if used)
+  if (hamburger && links && rightSide && menuIcon && closeIcon) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('is-active');
+      links.classList.toggle('show-nav');
+      rightSide.classList.toggle('show-nav');
+      if (hamburger.classList.contains('is-active')) {
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+      } else {
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      }
+    });
+  }
+
+    </script>
     <script>
       function validateNewsletter() {
         // Add your validation logic

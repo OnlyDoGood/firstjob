@@ -21,62 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
   changeBackground();
   setInterval(changeBackground, 5000);
 
-  // Hamburger menu and overlay
-  const hamburger = document.getElementById('hamburger-menu');
-  const navOverlay = document.getElementById('nav-overlay');
-  const navClose = document.getElementById('nav-close');
-  const menuIcon = hamburger?.querySelector('.menu-icon');
-  const closeIcon = hamburger?.querySelector('.close-icon');
-  const links = document.querySelector('.links');
-  const rightSide = document.querySelector('.right-side');
-
-  if (hamburger && navOverlay && navClose) {
-    hamburger.addEventListener('click', function() {
-      navOverlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      if (menuIcon && closeIcon) {
-        menuIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-      }
-    });
-
-    navClose.addEventListener('click', function() {
-      navOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-      if (menuIcon && closeIcon) {
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-      }
-    });
-
-    navOverlay.querySelectorAll('.nav-link, .login-btn, .member-btn, .products-list a').forEach(function(el) {
-      el.addEventListener('click', function() {
-        navOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-        if (menuIcon && closeIcon) {
-          menuIcon.style.display = 'block';
-          closeIcon.style.display = 'none';
-        }
-      });
-    });
-  }
-
-  // Hamburger for desktop nav (if used)
-  if (hamburger && links && rightSide && menuIcon && closeIcon) {
-    hamburger.addEventListener('click', function() {
-      hamburger.classList.toggle('is-active');
-      links.classList.toggle('show-nav');
-      rightSide.classList.toggle('show-nav');
-      if (hamburger.classList.contains('is-active')) {
-        menuIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-      } else {
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-      }
-    });
-  }
-
   // --- Payment Popup ---
   const paymentPopup = document.getElementById('payment-popup');
   const closePopupBtn = document.getElementById('close-payment-popup');
