@@ -2229,7 +2229,7 @@ header {
   border-radius: 25px;
   font-size: 1rem;
   outline: none;
-  min-width: 220px;
+  min-width: 200px;
   transition: border 0.2s;
 }
 
@@ -2689,8 +2689,8 @@ header {
     font-size: 1rem;
   }
   .newsletter-input input {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 0.8rem;
+    padding: 6px 9px;
   }
   .newsletter-input button {
     font-size: 0.95rem;
@@ -3568,7 +3568,18 @@ footer a:hover {
 }
 #deals-cta button:hover {
   background: linear-gradient(90deg, #b00cf4 0%, #23a6f0 100%);
-  color: #fff;
+  color: #c79d9d;
   box-shadow: 0 2px 8px rgba(176,12,244,0.15);
   transform: translateY(-2px) scale(1.04);
+}
+@media(min-width: 400px){
+.head{
+  display: flex;
+  flex-direction: row;
+  font-size: small;
+}
+.newsletter-input{
+  min-width: 150px;
+  font-size: small;
+}
 }
